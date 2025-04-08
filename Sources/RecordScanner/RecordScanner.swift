@@ -9,7 +9,7 @@ final class RecordMacroVisitor: SyntaxVisitor {
     
     override func visit(_ node: MacroExpansionExprSyntax) -> SyntaxVisitorContinueKind {
         // Tìm macro #record(...)
-        if node.macroName.text == "localized",
+        if node.macroName.text == "localized" || node.macroName.text == "LocalizedStringKey",
            let firstArg = node.arguments.first?.expression.as(StringLiteralExprSyntax.self) {
             
             // Ghép các segments lại thành string đầy đủ
