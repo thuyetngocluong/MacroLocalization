@@ -13,10 +13,10 @@ let package = Package(
             name: "MacroLocalization",
             targets: ["MacroLocalization"]
         ),
-        .executable(
-            name: "MacroLocalizationClient",
-            targets: ["MacroLocalizationClient"]
-        ),
+//        .executable(
+//            name: "MacroLocalizationClient",
+//            targets: ["MacroLocalizationClient"]
+//        ),
         .executable(
             name: "RecordScanner",
             targets: ["RecordScanner"]
@@ -45,7 +45,7 @@ let package = Package(
         ),
         
         // A client of the library, which is able to use the macro in its own code.
-        .executableTarget(name: "MacroLocalizationClient", dependencies: ["MacroLocalization"]),
+//        .executableTarget(name: "MacroLocalizationClient", dependencies: ["MacroLocalization"]),
         .executableTarget(
             name: "RecordScanner",
             dependencies: [
